@@ -1,9 +1,16 @@
 #include <stdio.h>
-#include ? ? ?
+#include <math.h>
 
 int main()
 {
-    // declare variables<-- These are comments, you can remove them if you want to
+    int a, b, c, d;
+    scanf("%d", &a);
+    scanf("%d", &b);
+    scanf("%d", &c);
+    scanf("%d", &d);
+    double l;
+    l = sqrt((a - c) * (a - c) + (b - d) * (b - d));
+    printf("%lf", l);
 
     // get user input
 

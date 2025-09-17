@@ -1,17 +1,32 @@
 #include <stdio.h>
-#include <math.h> //Why do we need this library?
+#include <math.h>
 
 int main()
 {
-    // declare variables
-
-    // get user input
-
-    /* calculate the discriminant   <-- this is a comment for multiple lines
-     the discriminant is: b² - 4ac
-    */
-
-    // according to the value of the discriminant, calculate the roots and print the results
+    int a, b, c;
+    double X1, X2;
+    X2 = 0;
+    scanf("%d", &a);
+    scanf("%d", &b);
+    scanf("%d", &c);
+    double Dis;
+    Dis = b * b - 4 * a * c;
+    if (Dis > 0)
+    {
+        X1 = ((0 - b) + sqrt(Dis)) / (2 * a);
+        printf("%lf\n", X1);
+        X2 = ((0 - b) - sqrt(Dis)) / (2 * a);
+        printf("%lf", X2);
+    }
+    if (Dis == 0)
+    {
+        X1 = (0 - b) / (2 * a);
+        printf("%lf", X1);
+    }
+    if (Dis < 0)
+    {
+        printf("No solution!");
+    }
 
     return 0;
 }
